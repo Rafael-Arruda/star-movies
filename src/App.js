@@ -1,16 +1,22 @@
-import React from 'react';
-import GlobalStyle from './styles/global';
+import React from "react";
+import GlovalStyle from './styles/global';
 
-import RoutesApp from './routes';
+import ModalProvider from "./contexts/modal";
+import MovieProvider from "./contexts/movie";
+import PaginationProvider from './contexts/pagination';
 
-function App() {
-  return (
-    <div>
-      <RoutesApp/>
-      
-      <GlobalStyle/>
-    </div>
-  );
+import RoutesApp from "./routes/route";
+
+export default function App() {
+  return(
+    <PaginationProvider>
+      <MovieProvider>
+        <ModalProvider>
+          <RoutesApp/>
+
+          <GlovalStyle/>
+        </ModalProvider>
+      </MovieProvider>
+    </PaginationProvider>
+  )
 }
-
-export default App;

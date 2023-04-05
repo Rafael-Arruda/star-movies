@@ -1,0 +1,16 @@
+#transition-modal-description::-webkit-scrollbar {
+    width: 8px;
+}
+
+#transition-modal-description::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+
+#transition-modal-description::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+#transition-modal-description::-webkit-scrollbar-thumb:hover {
+    background-color: #1976d2;
+}
